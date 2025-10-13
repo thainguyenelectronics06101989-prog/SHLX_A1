@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" sizes="any" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>ESP32 Web Interface</title>
+  </head>
+  <body>
+    <h1>CONFIGURATION</h1>
+
+    <h2>Config Contest</h2>
+    <form class="contest">
+      <h3 name="contest1">Contest 1</h3>
+      <div class="contest_name">
+        <label>Distance 1</label>
+        <input type="text" name="distance1" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 2</label>
+        <input type="text" name="distance2" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 3</label>
+        <input type="text" name="distance3" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 4</label>
+        <input type="text" name="distance4" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 5</label>
+        <input type="text" name="distance5" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 6</label>
+        <input type="text" name="distance6" value="0" />
+      </div>
+
+      <h3 name="contest2">Contest 2</h3>
+      <div class="contest_name">
+        <label>Distance 7</label>
+        <input type="text" name="distance7" value="0" />
+      </div>
+
+      <h3 name="contest3">Contest 3</h3>
+      <div class="contest_name">
+        <label>Distance 8</label>
+        <input type="text" name="distance8" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 9</label>
+        <input type="text" name="distance9" value="0" />
+      </div>
+      <h3 name="contest4">Contest 4</h3>
+      <div class="contest_name">
+        <label>Distance 10</label>
+        <input type="text" name="distance10" value="0" />
+      </div>
+      <div class="contest_name">
+        <label>Distance 11</label>
+        <input type="text" name="distance11" value="0" />
+      </div>
+      <button type="button" class="button">Refresh</button>
+      <button type="button" class="button">Send</button>
+      <button type="button" class="button">Run</button>
+      <button type="button" class="button">Stop</button>
+    </form>
+
+    <h2>Config Server</h2>
+    <form class="server">
+      <h3>Wifi Config</h3>
+      <div class="contest_name">
+        <label>SSID</label>
+        <input type="text" name="ssid" value="none" />
+      </div>
+      <div class="contest_name">
+        <label>PASS</label>
+        <input type="text" name="pass" value="none" />
+      </div>
+      <div class="contest_name">
+        <label>Static IP</label>
+        <input type="text" name="staticIP" value="192.168.130.180" />
+      </div>
+      <div class="contest_name">
+        <label>IP Server</label>
+        <input type="text" name="serverIP" value="192.168.0.23" />
+      </div>
+      <button class="button">Refresh</button>
+      <button class="button">Send</button>
+    </form>
+
+    <h2>OTA Update</h2>
+    <div class="config">
+      <h3>Upload file to update OTA</h3>
+      <form method="POST" enctype="multipart/form-data" id="upload-form">
+        <input type="file" id="file" name="update" />
+        <input type="submit" value="Update" />
+      </form>
+      <br />
+      <div id="prg" style="width: 0; color: white; text-align: center">0%</div>
+      <button class="button">Send</button>
+    </div>
+
+    <h2>Image update</h2>
+    <div>
+      <img class="image" id="photo" src="./favicon.png" alt="Camera Image" />
+      <button class="button" name="getImage">Refresh Image</button>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "sathach-forms-test",
+  "version": "1.0.0",
+  "description": "Local test server for forms in project/data/index.html",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

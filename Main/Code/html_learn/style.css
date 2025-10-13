@@ -1,0 +1,49 @@
+h1 {
+  font-family: cursive;
+  font-style: initial;
+  text-align: center;
+  color: yellowgreen;
+}
+body {
+  background-color: lightgoldenrodyellow;
+}
+h2 {
+  font-family: cursive;
+  font-style: initial;
+  color: forestgreen;
+}
+.config,
+.contest {
+  font-family: cursive;
+  font-style: initial;
+  color: chocolate;
+  margin-left: 5%;
+}
+.contest_name {
+  margin-left: 5%;
+}
+.contest_name input {
+  width: 30%;
+  padding: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #cabd91;
+  border-radius: 6px;
+  background-color: honeydew;
+}
+.button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}

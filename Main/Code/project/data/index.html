@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESP32 Web Interface</title>
+  </head>
+
+  <body>
+    <h1>CONFIGURATION ESP32</h1>
+    <h2>Contest config</h2>
+    <!-- Ten example forms. Each form will POST JSON to /sendData with { formId, values } -->
+    <div id="formsContainer">
+      <!-- We'll generate 10 forms with different example fields -->
+      <section class="forms-grid">
+        <form id="form1" class="data-form">
+          <h3>1 — Personal Info</h3>
+          <div>
+            <label>value 1:<input type="text" name="value1" required /></label>
+          </div>
+          <div>
+            <label>value 2:<input type="text" name="value2" /></label>
+          </div>
+          <div>
+            <label>value 3:<input type="text" name="value3" /></label>
+          </div>
+          <div>
+            <label>value 4:<input type="text" name="value4" /></label>
+          </div>
+          <div>
+            <label>value 5:<input type="text" name="value5" /></label>
+          </div>
+          <button type="submit">Send</button>
+          <button type="submit">Refresh</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form2" class="data-form">
+          <h3>2 — Vehicle</h3>
+          <label
+            >Plate number:<input type="text" name="plate" required
+          /></label>
+          <label>Model:<input type="text" name="model" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form3" class="data-form">
+          <h3>3 — Contest Settings</h3>
+          <label>Contest name:<input type="text" name="contestName" /></label>
+          <label
+            >Max participants:<input
+              type="number"
+              name="maxParticipants"
+              min="1"
+          /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form4" class="data-form">
+          <h3>4 — WiFi</h3>
+          <label>SSID:<input type="text" name="ssid" required /></label>
+          <label>Password:<input type="password" name="password" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form5" class="data-form">
+          <h3>5 — Schedule</h3>
+          <label>Date:<input type="date" name="date" /></label>
+          <label>Start time:<input type="time" name="time" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form6" class="data-form">
+          <h3>6 — Operator</h3>
+          <label>Operator ID:<input type="text" name="operatorId" /></label>
+          <label>Notes:<input type="text" name="notes" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form7" class="data-form">
+          <h3>7 — Location</h3>
+          <label>City:<input type="text" name="city" /></label>
+          <label>Address:<input type="text" name="address" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form8" class="data-form">
+          <h3>8 — Sensor Thresholds</h3>
+          <label
+            >Threshold A:<input type="number" name="thA" step="0.1"
+          /></label>
+          <label
+            >Threshold B:<input type="number" name="thB" step="0.1"
+          /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form9" class="data-form">
+          <h3>9 — Debug</h3>
+          <label
+            >Log level:
+            <select name="logLevel">
+              <option>info</option>
+              <option>warn</option>
+              <option>error</option>
+              <option>debug</option>
+            </select>
+          </label>
+          <label>Enable remote:<input type="checkbox" name="remote" /></label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+
+        <form id="form10" class="data-form">
+          <h3>10 — Custom JSON</h3>
+          <label
+            >Raw JSON:<textarea
+              name="rawJson"
+              rows="3"
+              placeholder='{"key":"value"}'
+            ></textarea>
+          </label>
+          <button type="submit">Send</button>
+          <div class="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
+  </body>
+  <script>
+    // Helper: read form inputs into a plain object
+    function serializeForm(form) {
+      const data = {};
+      const elements = form.querySelectorAll("input, select, textarea");
+      elements.forEach((el) => {
+        if (!el.name) return;
+        if (el.type === "checkbox") {
+          data[el.name] = el.checked;
+        } else if (el.tagName.toLowerCase() === "textarea") {
+          data[el.name] = el.value;
+        } else {
+          data[el.name] = el.value;
+        }
+      });
+      return data;
+    }
+
+    // Reusable sender: posts JSON to /sendData
+    async function sendJson(formId, payload, statusEl) {
+      statusEl.textContent = "Sending...";
+      statusEl.className = "status sending";
+      try {
+        const res = await fetch("/sendData", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ formId, values: payload }),
+        });
+        if (res.ok) {
+          statusEl.textContent = "Sent ✓";
+          statusEl.className = "status success";
+        } else {
+          const text = await res.text().catch(() => "");
+          statusEl.textContent = "Server error: " + (text || res.status);
+          statusEl.className = "status error";
+        }
+      } catch (err) {
+        statusEl.textContent = "Network error";
+        statusEl.className = "status error";
+        console.error("Send failed", err);
+      }
+      // clear sending class after a while
+      setTimeout(() => {
+        statusEl.classList.remove("sending");
+      }, 1500);
+    }
+
+    // Attach handler for all forms with class .data-form
+    document.querySelectorAll(".data-form").forEach((form) => {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        // Basic HTML5 validation
+        if (!form.reportValidity()) return;
+        const formId = form.id || "unknown";
+        const statusEl = form.querySelector(".status");
+        const payload = serializeForm(form);
+
+        // If form10 contains rawJson, try to parse it as JSON and send that instead
+        if (formId === "form10" && payload.rawJson) {
+          try {
+            const parsed = JSON.parse(payload.rawJson);
+            await sendJson(formId, parsed, statusEl);
+            return;
+          } catch (err) {
+            statusEl.textContent = "Invalid JSON";
+            statusEl.className = "status error";
+            return;
+          }
+        }
+
+        await sendJson(formId, payload, statusEl);
+      });
+    });
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      width: 30%;
+      margin-bottom: 8px;
+      font-size: large;
+    }
+
+    input[type="text"] {
+      width: 30%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</html>
