@@ -24,7 +24,13 @@ Motorbike::~Motorbike()
 void Motorbike::attachPhaseA(void *arg)
 {
     Motorbike *m = static_cast<Motorbike *>(arg);
-    m->encoderCount++;
+    m->DeltaTimeEncoder = micros() - m->LastTimeEncoder;
+    if (m->DeltaTimeEncoder > 2000)
+    {
+        m->encoderCount++;
+        m->DeltaTimeENC = m->DeltaTimeEncoder;
+        m->LastTimeEncoder = micros();
+    }
 }
 void Motorbike::attachPhaseB(void *arg)
 {
@@ -34,8 +40,8 @@ void Motorbike::attachPhaseB(void *arg)
 void Motorbike::init()
 {
     pinMode(this->hall_pin, INPUT_PULLUP);
-    pinMode(this->signel_left_pin, INPUT_PULLUP);
-    pinMode(this->engine_pin, INPUT_PULLUP);
+    pinMode(this->signel_left_pin, INPUT_PULLDOWN);
+    pinMode(this->engine_pin, INPUT_PULLDOWN);
 
     pinMode(this->encoder_a_pin, INPUT_PULLUP);
     attachInterruptArg(digitalPinToInterrupt(this->encoder_a_pin), Motorbike::attachPhaseA, this, RISING);
@@ -54,9 +60,8 @@ void Motorbike::init()
 }
 void Motorbike::update() // update sensor sate of motor
 {
-    this->signelLeft = digitalRead(this->signel_left_pin);
-    this->sensorHall = digitalRead(this->hall_pin);
-    this->signelEngine = digitalRead(this->engine_pin);
+
+    this->sensorHall = !digitalRead(this->hall_pin);
 
     this->distance = this->encoderCount * ENCODER_SCALE;
 
@@ -65,6 +70,26 @@ void Motorbike::update() // update sensor sate of motor
         uint32_t deltaTime = millis() - this->lastTime;
         this->speed = this->distance * 1000 / deltaTime;
         this->lastTime = millis();
+    }
+    // process signal Engine
+    if (digitalRead(this->engine_pin))
+    {
+        this->signelEngine = true;
+        this->lastTimeEngine = millis();
+    }
+    if ((millis() - this->lastTimeEngine > 1000) && this->signelEngine)
+    {
+        this->signelEngine = false;
+    }
+    // process signal left
+    if (digitalRead(this->signel_left_pin))
+    {
+        this->signelLeft = true;
+        this->lastTimeSignalLeft = millis();
+    }
+    if ((millis() - this->lastTimeSignalLeft > 1000) && this->signelLeft)
+    {
+        this->signelLeft = false;
     }
 }
 void Motorbike::setAttachLine(bool attach) // set attach line of motor
@@ -95,4 +120,4 @@ uint32_t Motorbike::getSpeed() // return speed of motor
 {
     return this->speed;
 }
-Motorbike motor(HALL_PIN, SIGNEL_LEFT_PIN, ENGINE_PIN, ENCODER_I_PIN);
+Motorbike motor(HALL_PIN, SIGNEL_LEFT_PIN, ENGINE_PIN, ENCODER_B_PIN);

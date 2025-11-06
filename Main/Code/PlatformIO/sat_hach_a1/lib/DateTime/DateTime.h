@@ -1,4 +1,5 @@
 #pragma once
+#include <Myconfig.h>
 #include <Arduino.h>
 #include <ArduinoJson.h>
 
@@ -32,9 +33,9 @@ public:
     uint8_t getDay();
     uint8_t getMonth();
     uint16_t getYear();
-    uint8_t getDayOfWeek();                                      // 0 = Sunday, 6 = Saturday
-    String toString();                                           // "YYYY-MM-DD HH:MM:SS"
-    uint32_t getTimestamp();                                     // seconds since 1970-01-01 00:00:00
+    uint8_t getDayOfWeek();  // 0 = Sunday, 6 = Saturday
+    String toString();       // "YYYY-MM-DD HH:MM:SS"
+    uint32_t getTimestamp(); // seconds since 1970-01-01 00:00:00
     uint32_t toTimestamp() { return getTimestamp(); }
     String convertToDateTime(uint32_t timestamp);                // convert timestamp to "YYYY-MM-DD HH:MM:SS"
     uint32_t convertToTimestamp(String dateStr, String timeStr); // convert "YYYY-MM-DD HH:MM:SS" to timestamp

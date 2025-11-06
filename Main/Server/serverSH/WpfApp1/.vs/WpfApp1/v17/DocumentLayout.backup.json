@@ -1,0 +1,163 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\nguoithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\nguoithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\appsettings.json||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|d:\\thietbisathach\\sathachxemay\\main\\server\\serversh\\wpfapp1\\wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18DC7222-69B1-43AE-B09D-0DF4E374103C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\appsettings.json",
+              "RelativeDocumentMoniker": "WpfApp1\\appsettings.json",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\appsettings.json",
+              "RelativeToolTip": "WpfApp1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T10:30:24.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "WpfApp1\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T10:19:37.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WpfApp1",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+              "RelativeDocumentMoniker": "WpfApp1\\WpfApp1.csproj",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+              "RelativeToolTip": "WpfApp1\\WpfApp1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-03T09:55:46.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\AssemblyInfo.cs",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
+              "RelativeToolTip": "WpfApp1\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T10:03:55.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainViewModel.cs",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainViewModel.cs",
+              "RelativeToolTip": "WpfApp1\\MainViewModel.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T10:01:30.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NguoiThi.cs",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\NguoiThi.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\NguoiThi.cs",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\NguoiThi.cs*",
+              "RelativeToolTip": "WpfApp1\\NguoiThi.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T09:56:12.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-03T09:48:40.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Server\\serverSH\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T09:48:39.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 #ifndef MICROSDTASK_H
 #define MICROSDTASK_H
 
+#include <Myconfig.h>
 #include <Arduino.h>
 #include "SD_MMC.h"
 #include "FS.h"

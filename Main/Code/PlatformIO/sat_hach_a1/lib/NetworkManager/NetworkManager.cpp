@@ -1,7 +1,8 @@
+#include <Myconfig.h>
 #include <WiFi.h>
 #include <WebServer.h>
 #include <ArduinoJson.h>
-#include <Config.h>
+// #include "Myconfig.h"
 #include "NetworkManager.h"
 
 NetworkManager::NetworkManager(HardwareManager &hwManager) : server(80)
@@ -121,6 +122,7 @@ void NetworkManager::startServer()
 void NetworkManager::handleClient()
 {
     server.handleClient();
+    client.checkClient();
 }
 void NetworkManager::handleControl()
 {
@@ -129,8 +131,8 @@ void NetworkManager::handleControl()
         String body = server.arg("plain");
         hardwareManager->serialLog.println("Control POST body: " + body);
 
-    JsonDocument doc; // use JsonDocument instead of deprecated DynamicJsonDocument
-    DeserializationError error = deserializeJson(doc, body);
+        JsonDocument doc; // use JsonDocument instead of deprecated DynamicJsonDocument
+        DeserializationError error = deserializeJson(doc, body);
         if (error)
         {
             hardwareManager->serialLog.println(F("deserializeJson() failed: "));

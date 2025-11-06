@@ -1,11 +1,12 @@
 #pragma once
+#include <Myconfig.h>
+#include "defineName.h"
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <Motorbike.h>
 #include <LogUtil.h>
 #include <ArduinoJson.h>
 #include <freertos/FreeRTOS.h>
-#include "defineName.h"
 #include <HardwareManager.h>
 
 extern TaskHandle_t _contestHandle;
@@ -34,20 +35,29 @@ private:
     LogEntry _logEntries;
 
     uint32_t _distance[11];
+    uint32_t startTime = 0;
+    uint8_t hallCount = 0;
+    uint8_t errOverrideStart = 0;
+    uint8_t errRunoutTimeStart = 0;
+    uint8_t errRunoutTimeContest = 0;
+    uint8_t errGoWrongWay = 0;
+    uint8_t errStopEngine = 0;
+    uint8_t errNoSignalLeft = 0;
 
     static void _Runner(void *pvParameters);
     void _runContest();
 
-    void _contest1Runer();
-    void _contest2Runer();
-    void _contest3Runer();
-    void _contest4Runer();
+    bool _contest1Runer();
+    bool _contest2Runer();
+    bool _contest3Runer();
+    bool _contest4Runer();
+    bool inDeltaValue(uint32_t value, uint32_t target, uint32_t delta);
 
 public:
     ContestManager(HardwareManager &hwManager);
     ~ContestManager();
     void begin();
-    void loadConfig(JsonDocument doc);
+    void loadConfig(String str);
     bool run();
     void stop();
     bool addContest(uint8_t contestID, uint8_t index);

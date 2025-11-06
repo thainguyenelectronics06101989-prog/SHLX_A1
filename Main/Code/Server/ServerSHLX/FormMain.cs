@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ServerSHLX
 {
@@ -65,60 +66,72 @@ namespace ServerSHLX
         {
             try
             {
-                NetworkStream ns = client.GetStream();
+                NetworkStream stream = client.GetStream();
+                byte[] buffer = new byte[1024];
+                int bytesRead;
 
                 while (client.Connected)
                 {
-
-                    // B1: đọc kích thước ảnh (4 byte)
-                    byte[] sizeBuffer = new byte[4];
-                    int read = ns.Read(sizeBuffer, 0, 4);
-
-                    if (read != 4) break;
-
-                    int imgSize = BitConverter.ToInt32(sizeBuffer, 0);
-
-                    this.Invoke((MethodInvoker)(() =>
+                    while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
                     {
-                        textBox1.Text = Convert.ToString(imgSize);
-                    }));
+                        string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                        textBox1.Text =message;
 
-                    // B2: đọc dữ liệu ảnh
-                    byte[] imgBuffer = new byte[imgSize];
-                    int totalRead = 0;
-                    while (totalRead < imgSize)
-                    {
-                        int r = ns.Read(imgBuffer, totalRead, imgSize - totalRead);
-                        if (r <= 0) break;
-                        totalRead += r;
+                        // Nếu muốn phản hồi lại client:
+                        string reply = "Server đã nhận: " + message;
+                        byte[] response = Encoding.UTF8.GetBytes(reply);
+                        stream.Write(response, 0, response.Length);
                     }
 
-                    // B3: hiển thị ảnh lên PictureBox
-                    if (totalRead == imgSize)
-                    {
-                        using (MemoryStream ms = new MemoryStream(imgBuffer))
-                        {
-                            Image img = Image.FromStream(ms);
+                    //// B1: đọc kích thước ảnh (4 byte)
+                    //byte[] sizeBuffer = new byte[4];
+                    //int read = ns.Read(sizeBuffer, 0, 4);
 
-                            // Update UI từ thread khác
-                            this.Invoke((MethodInvoker)(() =>
-                            {
-                                if (pictureBox1.Image != null)
-                                    pictureBox1.Image.Dispose();
-                                pictureBox1.Image = new Bitmap(img);
-                            }));
+                    //if (read != 4) break;
 
-                            // (Tuỳ chọn) Lưu file
-                            string folderPath = Path.Combine(Application.StartupPath, "Images");
+                    //int imgSize = BitConverter.ToInt32(sizeBuffer, 0);
 
-                            // Nếu thư mục chưa tồn tại thì tạo mới
-                            if (!Directory.Exists(folderPath))
-                                Directory.CreateDirectory(folderPath);
+                    //this.Invoke((MethodInvoker)(() =>
+                    //{
+                    //    textBox1.Text = Convert.ToString(imgSize);
+                    //}));
 
-                            string fileName = Path.Combine(folderPath, $"img_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
-                            File.WriteAllBytes(fileName, imgBuffer);
-                        }
-                    }
+                    //// B2: đọc dữ liệu ảnh
+                    //byte[] imgBuffer = new byte[imgSize];
+                    //int totalRead = 0;
+                    //while (totalRead < imgSize)
+                    //{
+                    //    int r = ns.Read(imgBuffer, totalRead, imgSize - totalRead);
+                    //    if (r <= 0) break;
+                    //    totalRead += r;
+                    //}
+
+                    //// B3: hiển thị ảnh lên PictureBox
+                    //if (totalRead == imgSize)
+                    //{
+                    //    using (MemoryStream ms = new MemoryStream(imgBuffer))
+                    //    {
+                    //        Image img = Image.FromStream(ms);
+
+                    //        // Update UI từ thread khác
+                    //        this.Invoke((MethodInvoker)(() =>
+                    //        {
+                    //            if (pictureBox1.Image != null)
+                    //                pictureBox1.Image.Dispose();
+                    //            pictureBox1.Image = new Bitmap(img);
+                    //        }));
+
+                    //        // (Tuỳ chọn) Lưu file
+                    //        string folderPath = Path.Combine(Application.StartupPath, "Images");
+
+                    //        // Nếu thư mục chưa tồn tại thì tạo mới
+                    //        if (!Directory.Exists(folderPath))
+                    //            Directory.CreateDirectory(folderPath);
+
+                    //        string fileName = Path.Combine(folderPath, $"img_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
+                    //        File.WriteAllBytes(fileName, imgBuffer);
+                    //    }
+                    //}
                 }
             }
             catch (Exception ex)

@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:FormMain.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\ModelTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:ModelTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\MainFlow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:MainFlow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\MainFlow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:MainFlow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\ModelTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:ModelTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3623E278-8F19-4150-95B8-45FAC86E2934}|ServerSHLX.csproj|solutionrelative:FormMain.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,27 +44,32 @@
               "RelativeDocumentMoniker": "FormMain.cs",
               "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.cs",
               "RelativeToolTip": "FormMain.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAvwGYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAApwCIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T21:07:02.173Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FormMain.Designer.cs",
               "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.Designer.cs",
               "RelativeDocumentMoniker": "FormMain.Designer.cs",
               "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.Designer.cs",
               "RelativeToolTip": "FormMain.Designer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIA5wCEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:13:07.053Z"
+              "WhenOpened": "2025-09-15T21:13:07.053Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ModelTest.cs",
               "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\ModelTest.cs",
               "RelativeDocumentMoniker": "ModelTest.cs",
@@ -72,7 +77,8 @@
               "RelativeToolTip": "ModelTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:40:35.485Z"
+              "WhenOpened": "2025-09-15T21:40:35.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,11 +90,12 @@
               "RelativeToolTip": "MainFlow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:10:40.538Z"
+              "WhenOpened": "2025-09-15T21:10:40.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -96,21 +103,20 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:07:07.647Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-09-15T21:07:07.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "FormMain.cs [Design]",
               "DocumentMoniker": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.cs",
               "RelativeDocumentMoniker": "FormMain.cs",
-              "ToolTip": "E:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.cs [Design]",
+              "ToolTip": "D:\\ThietBiSatHach\\SatHachXeMay\\Main\\Code\\Server\\ServerSHLX\\FormMain.cs [Design]",
+              "RelativeToolTip": "FormMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:48:35.557Z"
+              "WhenOpened": "2025-09-15T20:48:35.557Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

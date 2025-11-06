@@ -1,13 +1,15 @@
+#include "Myconfig.h"
 #include <MicroSDTask.h>
 #include <WiFi.h>
 #include <WebServer.h>
 #include <ArduinoJson.h>
-#include <Config.h>
 #include <Motorbike.h>
 #include <Update.h>
 #include <ContestManager.h>
 #include <HardwareManager.h>
 #include <NetworkManager.h>
+
+#define VERSION "1.0"
 
 const char *ssid_default = "PC_NET_MOBILE";
 const char *password_default = "1234567890";
@@ -61,10 +63,6 @@ void firstSetup()
   serializeJson(contest4Doc, data);
   hardwareManager.microSD.writeData(CONFIG_CONTEST2_PATH, data.c_str());
 }
-void wifiSetup()
-{
-}
-
 // Server functionality is provided by NetworkManager now.
 
 // main task
@@ -102,6 +100,7 @@ void contestTask(void *pvParameters)
 {
   contestManager.begin();
   hardwareManager.serialLog.println("Contest task inited running on core " + String(xPortGetCoreID()));
+  hardwareManager.serialLog.println("Version: " + String(VERSION));
   bool lastHall;
   bool lastSL;
   unsigned long timer = millis();
@@ -132,17 +131,26 @@ void contestTask(void *pvParameters)
       }
     }
 
-    if (motor.getSignelLeft() && !lastSL)
-    {
-      hardwareManager.serialLog.println("u have just touch to Left signal !!!");
-      contestManager.stop();
-    }
-    lastSL = motor.getSignelLeft();
+    // if (motor.getSignelLeft() && motor.lastMotorSignel.signelLeft)
+    // {
+    //   hardwareManager.serialLog.println("---> signelLeft attack");
+    // }
+    // motor.lastMotorSignel.signelLeft = motor.getSignelLeft();
+    // if (motor.getSignelEngine() && motor.lastMotorSignel.signelEngine)
+    // {
+    //   hardwareManager.serialLog.println("---> attachLine attack");
+    // }
+    // motor.lastMotorSignel.signelEngine = motor.getSignelEngine();
+    // if (motor.getSensorHall() && motor.lastMotorSignel.sensorHall)
+    // {
+    //   hardwareManager.serialLog.println("---> sensorHall attack");
+    // }
+    // motor.lastMotorSignel.sensorHall = motor.getSensorHall();
 
     if (millis() - timer > 1000)
     {
-      // hardwareManager.serialLog.println("Encoder count : " + String(motor.getEncoderCount()));
-      // hardwareManager.serialLog.println("DateTime : " + hardwareManager.dateTime.toString() + " , Timestamp: " + String(hardwareManager.dateTime.getTimestamp()));
+      // hardwareManager.serialLog.println("Encoder count : " + String(motor.getEncoderCount()) + " DeltaTime : " + String(motor.DeltaTimeENC));
+      //  hardwareManager.serialLog.println("DateTime : " + hardwareManager.dateTime.toString() + " , Timestamp: " + String(hardwareManager.dateTime.getTimestamp()));
       timer = millis();
     }
     vTaskDelay(1 / portTICK_PERIOD_MS);
@@ -154,7 +162,7 @@ void setup()
   Serial.begin(115200);
   Serial0.begin(115200);
   delay(1000);
-  Serial.println("Booting...");
+  Serial.println("Booting... \n Version: " + String(VERSION));
 
   hardwareManager.begin();
   motor.init();
